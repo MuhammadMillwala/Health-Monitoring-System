@@ -1,0 +1,34 @@
+version: '3.7'
+
+services:
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  backend:
+    build: ./backend
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - rabbitmq
+
+  consumer:
+    build: ./backend
+    volumes:
+      - ./backend:/app
+    entrypoint: ["/app/wait-for-it.sh", "rabbitmq", "5672", "--", "python", "consumer.py"]
+    depends_on:
+      - rabbitmq
+
+  result_service:
+    build: ./result_service
+    volumes:
+      - ./result_service:/app
+    ports:
+      - "8001:8001"
+    depends_on:
+      - rabbitmq

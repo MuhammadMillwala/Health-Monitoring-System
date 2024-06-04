@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Monitoring System</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Health Monitoring System</h1>
+        <form id="healthForm">
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="sex">Sex:</label>
+                <input type="number" id="sex" name="sex" required>
+            </div>
+            <div class="form-group">
+                <label for="cp">Chest Pain Type:</label>
+                <input type="number" id="cp" name="cp" required>
+            </div>
+            <div class="form-group">
+                <label for="trestbps">Resting Blood Pressure:</label>
+                <input type="number" id="trestbps" name="trestbps" required>
+            </div>
+            <div class="form-group">
+                <label for="chol">Serum Cholesterol:</label>
+                <input type="number" id="chol" name="chol" required>
+            </div>
+            <div class="form-group">
+                <label for="fbs">Fasting Blood Sugar:</label>
+                <input type="number" id="fbs" name="fbs" required>
+            </div>
+            <div class="form-group">
+                <label for="restecg">Resting Electrocardiographic Results:</label>
+                <input type="number" id="restecg" name="restecg" required>
+            </div>
+            <div class="form-group">
+                <label for="thalach">Maximum Heart Rate Achieved:</label>
+                <input type="number" id="thalach" name="thalach" required>
+            </div>
+            <div class="form-group">
+                <label for="exang">Exercise Induced Angina:</label>
+                <input type="number" id="exang" name="exang" required>
+            </div>
+            <div class="form-group">
+                <label for="oldpeak">Oldpeak:</label>
+                <input type="number" step="0.1" id="oldpeak" name="oldpeak" required>
+            </div>
+            <div class="form-group">
+                <label for="slope">Slope:</label>
+                <input type="number" id="slope" name="slope" required>
+            </div>
+            <div class="form-group">
+                <label for="ca">CA:</label>
+                <input type="number" id="ca" name="ca" required>
+            </div>
+            <div class="form-group">
+                <label for="thal">Thal:</label>
+                <input type="number" id="thal" name="thal" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
